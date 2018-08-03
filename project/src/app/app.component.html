@@ -1,9 +1,13 @@
-<app-header></app-header>
+<app-header
+  (changePage)="onChangePage($event)"
+></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes></app-recipes>
-      <app-shopping-list></app-shopping-list>
+      <app-recipes *ngIf="isRecipe === 'recipe'; else spList"></app-recipes>
+      <ng-template #spList>
+        <app-shopping-list></app-shopping-list>
+      </ng-template>
     </div>
   </div>
 </div>
