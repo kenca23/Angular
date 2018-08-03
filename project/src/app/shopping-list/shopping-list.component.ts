@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Ingredient } from '../shared/Ingredient.model';
+import { Ingredient } from '../shared/ingredient.model';
 
 @Component({
   selector: 'app-shopping-list',
@@ -13,9 +13,14 @@ export class ShoppingListComponent implements OnInit {
     new Ingredient('Potatoes', 15),
   ];
 
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onAddIngredient(ingInfo: Ingredient){
+    this.ingredients.push(ingInfo);
   }
 
 }
