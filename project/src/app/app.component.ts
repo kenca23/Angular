@@ -6,11 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isRecipe: string = 'recipe';
-
-  onChangePage(cpData: string) {
-    this.isRecipe = cpData;
-
-  }
-
 }
